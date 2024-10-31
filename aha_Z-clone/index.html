@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+     
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="/">Get the App</a>
+          <div class="nav-right">
+            <a href="/index.html">Investor Relations</a>
+            <a href="/">Add restaurant</a>
+            <a href="#" id="loginBtn">Log in</a>
+            <a href="#" id="signupBtn">Sign up</a>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+          </div>
+        </nav>
+        
+        <div class="mobile-nav" id="mobileNav">
+          <a href="/">Get the App</a>
+          <a href="/index.html">Investor Relations</a>
+          <a href="/">Add restaurant</a>
+          <a href="#" id="mob-log-btn">Log in</a>
+          <a href="#" id="mob-sign-btn">Sign up</a>
+        </div>
+        
+
+
+        <div class="content-wrapper">
+            <img src="Zimages/zoamto-white-logo.png" alt="z-logo" class="z-logo">
+            <h1>Discover the best food & drinks in Kolkata</h1>
+            <div class="search-container-main">
+                <div class="location-dropdown">
+                  <button class="location-btn"><i class="fa-solid fa-location-dot" style="color: #ff0000; margin-right: 5px;"></i> Kolkata</button>
+                  <div class="dropdown-content">
+                    <p>New York</p>
+                    <p>Los Angeles</p>
+                    <p>Chicago</p>
+                  </div>
+                </div>
+                <hr class="divider">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass" style="color: #979797;"></i></button>
+                <input type="text" placeholder="Search..." class="search-input">
+              </div>
+        </div>
+    </header>
+
+  <main>
+    <!-- Login and Signup popup modal-->
+    <section>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Log In</h2>
+          <form id="loginForm">
+            <div class="phone-input">
+              <select>
+                <option value="+91">+91</option>
+              </select>
+              <input type="text" placeholder="Phone number">
+            </div>
+            <button type="button" style="background: #d8d7d7;">Send OTP</button>
+            <div class="or-section">
+              <hr>
+              <span>or</span>
+              <hr>
+            </div>
+            <button type="button" class="email-btn"><i class="fa-solid fa-envelope fa-bounce" style="color: #fff;"></i> Continue with Email</button>
+            <button type="button" class="google-btn"><i class="fa-brands fa-google fa-bounce"></i> Sign in with Google</button>
+          </form>
+
+          <form id="signupForm" style="display: none;">
+            <input type="text" placeholder="First Name" class="full-name-input">
+            <input type="text" placeholder="Last Name" class="full-name-input">
+            <input type="email" placeholder="Email" class="email-input">
+            <div class="terms-checkbox">
+              <input type="checkbox" id="terms">
+              <label for="terms">I agree to Zomato's <a href="#">Terms of Service</a> <a href="#">Privacy Policy</a> and <a href="#">Content Policies</a></label>
+            </div>
+            <button type="button" class="create-account-btn">Create account</button>
+            <div class="or-section">
+              <hr>
+              <span>or</span>
+              <hr>
+            </div>
+            <button type="button" class="google-btn">Sign in with Google</button>
+          </form>
+          <div class="new-account">
+            <hr>
+            <p>New to Zomato? <a href="#">Create account</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three cards-->
+    <section>
+        <div class="card-container">
+          <a href="/cardss.html">
+            <div>
+              <div class="img-container"><img src="Zimages/i-card-sub3.jpg" alt="" ></div>
+              <p class="card-heading">Order Online</p>
+              <p>Stay home and order to your doorstep</p>
+            </div>
+          </a>
+          <div>
+            <div class="img-container"><img src="Zimages/i-card-sub2.jpg" alt=""></div>
+            <p  class="card-heading">Dining</p>
+            <p>View the city's favourite dining venues</p>
+          </div>
+          <div>
+            <div class="img-container"><img src="Zimages/i-card-sub1.jpg" alt=""></div>
+            <p class="card-heading">Live Events</p>
+            <p>Discover India's best events & concerts</p>
+          </div>
+        </div>
+    </section>
+     
+    <!-- Collection text and Places-->
+    <section>
+        <div class="collections-text-content">
+            <div class="collection-t1"><h1>Collections</h1></div>
+            <div class="collection-t2">
+                <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Kolkata, based on trends</p>
+                <span>All collections in Kolkata<i class="fa-solid fa-caret-right" style="color: #FF7E8B; margin-left:5px;"></i></span>
+            </div>
+        </div>
+
+        <div class="collections-container">
+          <div class="collection-card">
+            <img src="Zimages/i-card-1.jpg" alt="Collection Image 1">
+            <div class="text-overlay">
+              <p class="card-heading">Top Trending Spots</p>
+              <p>33 Places <i class="fa-solid fa-caret-right" style="color: #ffffff;"></i></p>
+            </div>
+          </div>
+          <div class="collection-card">
+            <img src="Zimages/i-card-2.jpg" alt="Collection Image 2">
+            <div class="text-overlay">
+              <p class="card-heading">Newly Opened Places</p>
+              <p>23 Places <i class="fa-solid fa-caret-right" style="color: #ffffff;"></i></p>
+            </div>
+          </div>
+          <div class="collection-card">
+            <img src="Zimages/i-card-3.jpg" alt="Collection Image 3">
+            <div class="text-overlay">
+              <p class="card-heading">Best Korean Restaurants</p>
+              <p>10 Places <i class="fa-solid fa-caret-right" style="color: #ffffff;"></i></p>
+            </div>
+          </div>
+          <div class="collection-card">
+            <img src="Zimages/i-card-4.jpg" alt="Collection Image 4">
+            <div class="text-overlay">
+              <p class="card-heading">Best Rooftop Places</p>
+              <p>21 Places <i class="fa-solid fa-caret-right" style="color: #ffffff;"></i></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!--Localities Container-->  
+      <section>
+        <div class="localities-container">
+          <div class="title">
+            <p>Popular localities in and around <span class="city-Name">Kolkata</span></p>
+          </div>
+          <div class="localities-card-container">
+            <div class="localities-card">
+              <div class="localities-text-content">
+                <h5>Park Street Area</h5>
+                <p>197 places</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="localities-card">
+              <div class="localities-text-content">
+                <h5>Sector 5, Salt Lake</h5>
+                <p>275 places</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="localities-card">
+              <div class="localities-text-content">
+                <h5>Sector 1, Salt Lake</h5>
+                <p>272 places</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="localities-card">
+              <div class="localities-text-content">
+                <h5>Ballygunge</h5>
+                <p>189 places</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="localities-card">
+              <div class="localities-text-content">
+                <h5>Southern Avenue</h5>
+                <p>128 places</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="localities-card">
+              <div class="localities-text-content">
+                <h5>New Town</h5>
+                <p>949 places</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="localities-card">
+              <div class="localities-text-content">
+                <h5>Camac Street Area</h5>
+                <p>79 places</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="localities-card">
+              <div class="localities-text-content">
+                <h5>Chinar Park</h5>
+                <p>344 places</p>
+              </div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="localities-card">
+              <div class="localities-last-text">
+                <h5>see more <i class="fa-solid fa-chevron-down"></i></h5>
+              </div>
+            </div>
+           </div> 
+          </div>  
+    </section> 
+    
+    <!--Download content container with phone image-->
+    <section>
+      <div class="main-container">
+        <div class="app-container">
+          <div class="app-header">
+            <img src="Zimages/phone-img.png" alt="phone-img"/>
+          </div>
+          <div class="app-body">
+            <div class="app-heading">
+              <h2>Get the Zomato app</h2>
+            </div>
+            <div class="app-header phone">
+              <img src="Zimages/phone-img.png" alt="phone-img"/>
+            </div>
+
+
+            <div class="app-text">
+              <p class="para">We will send you a link, open it on your phone to download the app</p>
+            </div>
+            <div class="radio-buttons">
+              <div class="radio-input-b1">
+                <input type="radio" id="email-btn" name="contact-method" checked />
+              <label for="email-btn">Email</label>
+
+              <input type="radio" id="phone-btn" name="contact-method" />
+              <label for="phone-btn">Phone</label>
+              </div>
+            </div>
+
+            
+              <div class="input-field">
+                <input type="email" placeholder="Enter" />
+                <button>Share App Link</button>
+              </div>
+              
+              <div class="download-text">
+                <p>Download app from</p>
+              </div>
+
+              <div class="store-buttons">
+                <div>
+                  <img src="Zimages/google-playstore.jpg" alt="Google Play Store" />
+                <img src="Zimages/apple-playstore.jpg" alt="Apple App Store" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!--Detail dropdown container-->
+    <section>
+      <div class="details-container">
+        <h2>Explore options near me</h2>
+        <details>
+          <summary>Popular Cuisines Near Me</summary>
+          <p>Bakery near me . Bengali near me . Beverages near me . Biryani near me . Burger near me . Chinese near me . Continental near me.  
+            Desserts near me . Kebab near me . Momos near me . Mughlai near me . North Indian near me . Pizza near me . Rolls near me . Sandwich near me . Seafood near me . Shake near me . Sichuan near me . South Indian near me . Street near me.
+          </p>
+        </details>
+        <details>
+          <summary>Popular Restaurant Types Near Me</summary>
+          <p>Bakeries near me . Bars near me . Beverage Shops near me . Bhojanalya near me . Cafés near me . Casual Dining near me . 
+            Clubs near me . Cocktail Bars near me . Dessert Parlors near me . Dhabas near me . Fine Dining near me . Food Courts near me . Food Trucks near me . Kiosks near meLounges near me . Microbreweries near me . Paan Shop near me . Pubs near me . Quick Bites near me . Shacks near me . Sweet Shops near me .</p>
+        </details>
+        <details>
+          <summary>Top Restaurant Chains</summary>
+          
+             <div class="chains">
+               <div>Burger King</div>
+               <div>Burger Singh</div>
+               <div>Domino's</div>
+               <div>Haldiram's</div>
+               <div>KFC</div>
+               <div>McDonald's</div>
+               <div>Paradise Biryani</div>
+               <div>Pizza Hut</div>
+               <div>WOW! Momo</div>
+             </div>
+        </details>
+        <details>
+          <summary>Cities We Deliver To</summary>
+          <div class="cities-flex-container">
+            <div>
+              <div>Delhi NCR</div>
+              <div>Hyderabad</div>
+              <div>Ahmedabad</div>
+              <div>Nashik</div>
+              <div>Amritsar</div>
+              <div>Ranchi</div>
+              <div>Vadodara</div>
+              <div>Puducherry</div>
+              <div>Srinagar</div>
+              <div>Haridwar</div>
+              <div>Kozhikode</div>
+              <div>Jodhpur</div>
+              <div>Jalandhar</div>
+            </div>
+            <div>
+              <div>Kolkata</div>
+              <div>Chennai</div>
+              <div>Chandigarh</div>
+              <div>Ooty</div>
+              <div>Kanpur</div>
+              <div>Visakhapatnam</div>
+              <div>Nagpur</div>
+              <div>Surat</div>
+              <div>Khajuraho</div>
+              <div>Leh</div>
+              <div>Alappuzha</div>
+              <div>Kota</div>
+              <div>Jammu</div>
+            </div>
+            <div>
+              <div>Mumbai</div>
+              <div>Lucknow</div>
+              <div>Goa</div>
+              <div>Shimla</div>
+              <div>Allahabad</div>
+              <div>Bhubaneswar</div>
+              <div>Agra</div>
+              <div>Varanasi</div>
+              <div>Neemrana</div>
+              <div>Pushkar</div>
+              <div>Thrissur</div>
+              <div>Ajmer</div>
+              <div>Manali</div>
+            </div>
+            <div>
+              <div>Bengaluru</div>
+              <div>Kochi</div>
+              <div>Indore</div>
+              <div>Ludhiana</div>
+              <div>Aurangabad</div>
+              <div>Coimbatore</div>
+              <div>Dehradun</div>
+              <div>Patna</div>
+              <div>Cuttack</div>
+              <div>Rajkot</div>
+              <div>Manipal</div>
+              <div>Mussoorie</div>
+              <div>Pune</div>
+              <a href="#">All delivery cities</a>
+            </div>
+            <div>
+              <div>Jaipur</div>
+              <div>Gangtok</div>
+              <div>Guwahati</div>
+              <div>Bhopal</div>
+              <div>Mangalore</div>
+              <div>Mysore</div>
+              <div>Udaipur</div>
+              <div>Trivandrum</div>
+              <div>Madurai</div>
+              <div>Vijayawada</div>
+              <div>Rishikesh</div>
+            </div>
+          </div>  
+        </details>
+      </div>
+    </section>
+  </main>  
+    
+    <footer>
+      <!----  Footer top nav   ---->
+      <div class="footer-top">
+        <div class="footer-logo-buttons">
+          <div>
+            <img src="Zimages/zomato-black-logo.png" alt="z-Logo" class="footer-z-logo">
+          </div>
+          <div>
+            <button> Download from App store</button>
+            <button>Get it on Google Play</button>
+          </div>
+        </div>
+      </div>
+
+      <!--    Footer Bottom    -->
+      <div class="footer-bottom">
+        <div>
+          <h5>About Zomato</h5>
+          <p>Who We Are</p>
+          <p>Blog</p>
+          <p>Work With Us</p>
+          <p>Investor Relations</p>
+          <p>Report Fraud</p>
+          <p>Press Kit</p>
+          <p>Contact Us</p>
+        </div>
+        <div>
+          <h5>Zomaverse</h5>
+          <p>Zomato</p>
+          <p>Blinkit</p>
+          <p>Feeding India</p>
+          <p>Hyperpure</p>
+          <p>Zomato Live</p>
+          <p>Zomaland</p>
+          <p>Weather Union</p>
+        </div>
+        <div>
+          <h5>For Restaurants</h5>
+          <p>Partner With Us</p>
+          <p>Apps For You</p>
+        </div>
+        <div>
+          <h5>Learn More</h5>
+          <p>Privacy</p>
+          <p>Security</p>
+          <p>Terms</p>
+          <p>Sitemap</p>
+        </div>
+
+        <div class="social-links-box">
+          <h5>Social Links</h5>
+          <div class="social-icon-box">
+            <div><i class="fa-brands fa-linkedin-in"></i></div>
+            <div><i class="fa-brands fa-square-instagram"></i></div>
+            <div><i class="fa-brands fa-x-twitter"></i></div>
+            <div><i class="fa-brands fa-youtube"></i></div>
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+          </div>
+          <div class="playstore-img-box">
+            <div>
+              <img src="Zimages/apple-playstore.jpg" width="100px" alt="Apple Play Store">
+            </div>
+            <div>
+              <img src="Zimages/google-playstore.jpg"  width="100px" alt="Google Play Store">
+            </div>
+          </div>
+        </div>
+      </div> 
+      <p class="footer-para">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.</p> 
+        
+
+    </footer>
+    
+  <script src="script.js"></script>
+</body> 
+</html>

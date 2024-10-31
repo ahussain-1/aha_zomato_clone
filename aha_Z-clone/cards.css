@@ -1,0 +1,1074 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* ----------------  Navbar  -------------- START  ----  Here--------*/
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #FFFFFF;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.z-nav-logo{
+  margin-right: 15px;
+}
+a {
+  text-decoration: none;
+  color: #696969;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.nav-right {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+}
+.nav-right a:hover {
+  color: #ff6f61;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.hamburger i {
+  font-size: 24px;
+  color: #333;
+}
+.mobile-nav {
+  display: none;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 250px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  padding-top: 20px;
+  transition: left 0.3s ease;
+}
+.mobile-nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+.mobile-nav a:hover {
+  background-color: #f1f1f1;
+}
+.show {
+  left: 0 ;
+  display: block;
+} 
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 750px;
+  background-color: white;
+  flex-grow: 2; /* Allows it to grow and shrink */
+  flex-shrink: 1;
+}
+  .location-dropdown {
+    position: relative;
+  }
+  .location-btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    color: #1C1C1C;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    color: #1C1C1C;
+    z-index: 1;
+  }
+  .dropdown-content p {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .dropdown-content p:hover {
+    background-color: #ddd;
+  }
+  .location-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .divider {
+    height: 20px;
+    margin: 0 10px;
+    border: 0;
+    border-left: 1px solid #ddd;
+  }
+  .search-input {
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+  .search-input::placeholder {
+    font-size: 18px;
+  }
+  .search-btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+  }
+/* ------------------  Navbar -----------------   Ended  ---------------- */ 
+
+
+/* ---------------------- Login singup modal popup -----------------------*/
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  .modal-content h2 {
+    margin-bottom: 2vh;
+  }
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 25px;
+  }
+  .phone-input {
+    display: flex;
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 2vh;
+  }
+  .phone-input select {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+  }
+  .phone-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+  }
+  .phone-input input::placeholder {
+    font-size: 16px;
+  }
+  .modal-content button {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    color: #FFFFFF;
+    margin-bottom: 2vh;
+    font-family: 'Manrope',sans-serif;
+  }
+  .modal-content button:last-of-type{
+    margin-bottom: 0;
+  }
+  .or-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+  .or-section hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0;
+  }
+  .or-section span {
+    padding: 0 10px;
+    color: #888;
+  }
+  .email-btn {
+    background-color: #ff2f2f;
+  }
+  .google-btn {
+    background-color: #ff2f2f;
+  }
+  .new-account {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .new-account hr {
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  .new-account p {
+    margin-top: 10px;
+    font-weight: 200;
+    font-size: 16px;
+    color: #696969;
+    font-family: 'Manrope',sans-serif;
+  }
+  .new-account a {
+    color: #ff2f2f;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Manrope',sans-serif;
+  }
+  /* Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* -------------- Sign-up Modal additional css -----------*/
+  .full-name-input, .email-input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 2vh;
+  }
+  .terms-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 2vh;
+    font-family: 'Manrope',sans-serif;
+  }
+  .terms-checkbox input {
+    margin-right: 10px;
+  }
+  .terms-checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 22px;
+    height: 17px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+  }
+  .terms-checkbox input[type="checkbox"]:checked {
+    background-color: #ff2f2f; 
+    border-color: #ff2f2f;
+  }
+  .terms-checkbox input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    padding: 0 0 2px;
+  }
+  .terms-checkbox a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Manrope',sans-serif;
+  }
+  .terms-checkbox a:hover {
+    text-decoration: underline;
+  }
+  .create-account-btn {
+    background-color: #ff6f61;
+    color: white;
+  }
+/* ------------------ Login singup modal popup Ended --------------------*/  
+
+
+/*----------------------- Bottom Nav -----------------------*/  
+  .below-navbar {
+    padding: 20px;
+    background-color: #FFFFFF;
+  }
+  .max-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .breadcrumb-nav {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .breadcrumb-nav a {
+    font-size: 0.9rem;
+    color: #696969;
+    text-decoration: none;
+    font-family: 'Manrope',sans-serif;
+    font-weight: 300;
+    margin: 0 5px;
+  }
+  .breadcrumb-nav a:hover {
+    color: #ff6f61;
+  }
+  .categories {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  .category {
+    padding: 5px 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    color: #696969;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .category div{
+    border-radius: 50%;
+    background: #F8F8F8;
+    padding: 5px 8px;
+  }
+  .category:hover {
+    border-bottom: 3px solid #ff6f61;
+  }
+  .filters {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .filter-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1rem;
+    color: #555;
+    border: none;
+  }
+  .filter-btn:hover {
+    background-color: #ebe7e7;
+  }
+  .pureVeg-btn-toggle {
+    background-color: #267E3E;
+    color: #fff;
+  }
+/*----------------------- Bottom Nav Ended -------------------*/   
+
+/*---------------------  Filter popup modal -----------------*/
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+/* Close Button */
+.popup-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.popup-close:hover,
+.popup-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.filter-options {
+  margin-top: 20px;
+}
+#filterForm{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2px;
+}
+.filter-options > #filterForm  hr{
+  height: 1px;
+  background-color: #ddd;
+}
+.filter-options > #filterForm label{
+  padding:10px;
+}
+.filter-options > #filterForm label:hover{
+background-color: #ebe7e7;
+}
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.filter-buttons button {
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.filter-buttons .clear-filters {
+  background-color: #ddd;
+  color: black;
+}
+/*-------------     Filter popup modal Ended       ------------*/
+ 
+
+/* --------------------- Food Item & Brand Slider -------------------*/
+  .food-items{
+    max-width: 1200px;
+    width: 100%;
+    height: 47vh;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 2vh;
+    justify-content: center;
+    padding: 3px 5px;
+    gap: 10px;
+}
+.food-items h2{
+    font-weight: 500;
+    margin-top: 32px;
+    font-size: 30px;
+    font-family: 'Manrope',sans-serif;
+    color: #1C1C1C;
+}
+.food-item-slider{
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    height: 33vh;
+    padding: 0 40px;
+    align-items: center;
+}
+.food-item-slider::-webkit-scrollbar{
+    display: none;
+}
+.food-item-slider > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-family: 'Manrope',sans-serif;
+    font-weight: 300;
+    color: #363636;
+    margin: 5px 10px;
+}
+.food-item-slider > div > img{
+    border-radius: 50%;
+    width: 150px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.food-brands{
+    background: #fff;
+    margin-bottom: 3vh;
+    height: 55vh;
+}
+.food-brands > h2{
+    margin: 30px 0 0 32px;
+}
+.food-brand-slider{
+    height: 40vh;
+}
+.food-brand-slider > div h6:first-of-type{
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Manrope',sans-serif;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+.food-brand-slider > div h6:last-of-type{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 0;
+    font-family: 'Manrope',sans-serif;
+}
+/* --------------------- Food Item & Brand Slider Ended -------------------*/
+
+
+/*---------------------------  Card Container  -------------------*/
+.main-card-container {
+  margin: 3vh auto;
+  max-width: 1200px;
+  width: 100%;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 20px;
+}
+.cards-content {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 1;
+}
+.cards-content:hover{
+  border:1px solid #ddd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.img-container img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-bottom: 1px solid #ddd;
+  border-radius: 12px;
+}
+.heading-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading-rating h4 {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 8px 0 6px;
+  color: rgb(28,28,28);
+  font-family: 'Manrope',sans-serif;
+}
+.heading-rating span {
+  background-color: #267E3E;
+  color: #FFFFFF;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Manrope',sans-serif;
+}
+.descrip-price {
+  display: flex;
+  justify-content: space-between;
+  color: #696969;
+}
+.descrip-price p {
+  font-size: 14px;
+  margin: 0;
+  padding: 0px 0px 4px;
+  font-family: 'Manrope',sans-serif;
+}
+.delivery-time {
+  text-align: right;
+}
+.delivery-time p {
+  padding: 2px 5px 3px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #363636;
+  font-family: 'Manrope',sans-serif;
+}
+/*------------------------  Card Container Ended -------------------*/
+
+
+/* --------------------    Detail option container    -------------------*/
+.details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20 35px;
+    background-color: #FCFCFC;
+    margin-bottom: 6rem;
+  }
+  .details-container h2{
+    font-size: 36px;
+    padding-bottom: 10px;
+    font-family: 'Manrope',sans-serif;
+    font-weight: 400;
+    color: #363636;
+  }
+  details {
+    background-color: #FFFFFF;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  details p {
+    line-height: 35px;
+    letter-spacing: 1.5px;
+    color: #929292;
+  }
+  summary > h5 {
+    font-size: 1.25rem;
+    cursor: pointer;
+    font-family: 'Manrope',sans-serif;
+    font-weight: 400;
+    color: #1C1C1C;
+  }
+  .chains {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  .chains div {
+    flex: 1 1 calc(33.33% - 10px);
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+    color: #929292;
+  }
+  .cities-flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    flex-wrap: wrap;
+  }
+  .cities-flex-container > div {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px;
+  }
+  .cities-flex-container div > div {
+    padding: 5px 0;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .cities-flex-container a {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: #ff6f61;
+    text-decoration: none;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+/* -----------------    Detail option container Ended   ----------------*/  
+
+
+/*-----------------------   Footer-STart   --------------------*/
+footer {
+    padding: 20px;
+    background-color: #f8f8f8;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .footer-logo-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px 10px;
+    align-items: center;
+  }
+  .footer-logo-buttons div:first-child {
+    display: flex;
+    align-items: center;
+  }
+  .footer-logo-buttons img {
+    width: 150px;
+  }
+  .footer-logo-buttons div:last-child {
+    display: flex;
+    gap: 10px;
+    height: 50px;
+  }
+  .footer-logo-buttons button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+  }
+  .footer-bottom div {
+    flex: 1;
+    margin: 0 10px;
+  }
+  .footer-bottom h5 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family:'Manrope',sans-serif;
+    color: #363636;
+  }
+  .footer-bottom p {
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family:'Manrope',sans-serif;
+    color: #767676;
+  }
+  .footer-para{
+    margin: 20px 0 5px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-family:'Manrope',sans-serif;
+    color: #767676;
+  }
+  .social-links-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .social-icon-box{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    gap: 3px;
+    width: 100%;
+    max-width: 130px;
+    height: 50px;
+  
+  }
+  .social-icon-box div{
+    height: 20px;
+    width: auto;
+    border-radius: 50%;
+    color: white;
+    background: #1C1C1C;
+    margin: 0;
+    padding: 0;
+  }
+  .fa-linkedin-in,
+  .fa-square-instagram,
+  .fa-x-twitter,
+  .fa-youtube,
+  .fa-facebook-f{
+    font-size:12px;
+    padding: 3px 5px;
+  }
+/*-----------------------   Footer - Ended   --------------------*/
+
+
+/* -----------------------  Media Query  -------------------------*/
+  @media screen and (min-width: 390px) and (max-width: 576px){
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    nav{
+      height: 100px;
+    }
+    .search-container, .nav-right {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+      position: absolute;
+      margin-top: 20px;
+      top: 15px;
+      left: 15px;
+    }
+    .z-nav-logo {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 70px;
+      height: 70px;
+    }
+    .breadcrumb-nav a{
+      font-size: 12px;
+    }
+    .below-navbar{
+      padding:20px 5px;
+    }
+    .categories{
+      min-width: 390px;
+      width: auto;
+      overflow-x: auto;
+    }
+    .categories::-webkit-scrollbar{
+      display: none;
+    }
+    .food-items{
+      height:47vh;
+    }
+    .food-items > h2{
+      margin-left: 32px;
+    }
+    .food-item-slider{
+      height: 33vh;
+    }
+    .food-brands{
+      height:55vh;
+      margin-bottom: 2vh;
+    }
+    .food-brands > h2{
+      margin-top: 15px;
+    }
+    .food-brand-slider{
+      height: 40vh;
+    }
+    .card-container{
+      gap: 10px;
+    }
+    .cards-content {
+      height: auto; 
+    }
+    .details-container > details > summary > h5{
+      font-size: 17px;
+    }
+    .details-container{
+      max-width: 576px;
+      min-width: 390px;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    .details-container h2{
+      font-size: 22px;
+      margin-left: 2vw;
+    }
+    details {
+      padding: 15px;
+    }
+    footer{
+      margin-bottom: 10px;
+    }
+    .footer-logo-buttons div> img{
+      width: 100px;
+    }
+    .footer-logo-buttons div:last-of-type{
+      width: 60%;
+    }
+    .footer-logo-buttons > div:last-of-type button{
+      font-size: 14px;
+    }
+    .footer-bottom{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+    }
+    .footer-bottom > div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-bottom > div > h5{
+      font-size: 18px;
+    }
+    .footer-bottom > div > p{
+      font-size: 14px;
+    }
+    .social-links-box{
+      gap: 20px;
+      padding: 10px;
+    }
+    .footer-para{
+      text-align: center;
+      padding: 2px 5px;
+    }
+  } 
+
+
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    nav{
+      height: 100px;
+    }
+    .search-container, .nav-right {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+      position: absolute;
+      margin-top: 20px;
+      top: 15px;
+      left: 15px;
+    }
+    .z-nav-logo {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 90px;
+      height: 90px;
+    }
+    .breadcrumb-nav a{
+      font-size: 12px;
+    }
+    .below-navbar{
+      padding:20px 5px;
+    }
+    .categories{
+      min-width: 390px;
+      width: auto;
+      overflow-x: auto;
+    }
+    .categories::-webkit-scrollbar{
+      display: none;
+    }
+    .food-items{
+      height:47vh;
+    }
+    .food-items > h2{
+      margin-left: 32px;
+    }
+    .food-item-slider{
+      height: 33vh;
+    }
+    .food-brands{
+      height:55vh;
+      margin-bottom: 2vh;
+    }
+    .food-brands > h2{
+      margin-top: 15px;
+    }
+    .food-brand-slider{
+      height: 40vh;
+    }
+    .card-container{
+      gap: 10px;
+    }
+    .cards-content {
+      height: auto; 
+    }
+    .details-container > details > summary > h5{
+      font-size: 18px;
+    }
+    .details-container{
+      max-width: 768px;
+      min-width: 577px;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    .details-container h2{
+      font-size: 24px;
+      margin-left: 2vw;
+    }
+    details {
+      padding: 15px;
+    }
+    footer{
+      margin-bottom: 10px;
+    }
+    .footer-logo-buttons div> img{
+      width: 120px;
+    }
+    .footer-logo-buttons div:last-of-type{
+      width: 60%;
+    }
+    .footer-logo-buttons > div:last-of-type button{
+      font-size: 14px;
+    }
+    .footer-bottom{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+    }
+    .footer-bottom > div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-bottom > div > h5{
+      font-size: 18px;
+    }
+    .footer-bottom > div > p{
+      font-size: 14px;
+    }
+    .social-links-box{
+      gap: 20px;
+      padding: 10px;
+    }
+    .footer-para{
+      text-align: center;
+      padding: 2px 5px;
+    }
+  }
+  
+  @media screen and (min-width: 777px) and (max-width: 1020px) {
+    .search-container{
+      max-width: 550px;
+    }
+    .cards-content {
+      height: auto; 
+    }
+  }
+
+
+

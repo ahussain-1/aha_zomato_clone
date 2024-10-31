@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="order.css">
+
+</head>
+<body>
+  <header>
+      <nav>
+        <a href="/"><img src="Zimages/zomato-black-logo.png" width="100px" class="z-nav-logo"></a>
+        <div class="search-container">
+          <div class="location-dropdown">
+            <button class="location-btn">
+              <i class="fa-solid fa-location-dot" style="color: #ff0000; margin-right: 5px;"></i> Kolkata
+            </button>
+            <div class="dropdown-content">
+              <p>New York</p>
+              <p>Los Angeles</p>
+              <p>Chicago</p>
+            </div>
+          </div>
+          <hr class="divider">
+          <input type="text" placeholder="Search..." class="search-input">
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass" style="color: #222121;"></i>
+          </button>
+        </div>
+       <a href="/cart.html" class="cart-icon-desktop">
+        <div class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+       </a>
+        <div class="nav-right">
+          <a href="#" id="loginBtn">Log in</a>
+          <a href="#" id="signupBtn">Sign up</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <i class="fa fa-bars"></i>
+        </div>
+      </nav>
+
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#" id="mob-log-btn">Log in</a>
+        <a href="#" id="mob-sign-btn">Sign up</a>
+      </div>
+  </header>
+
+  <main>
+    <!-- Login and Signup popup modal-->
+    <section>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Log In</h2>
+          <form id="loginForm">
+            <div class="phone-input">
+              <select>
+                <option value="+91">+91</option>
+                
+              </select>
+              <input type="text" placeholder="Phone number">
+            </div>
+            <button type="button" style="background: #d8d7d7;">Send OTP</button>
+            <div class="or-section">
+              <hr>
+              <span>or</span>
+              <hr>
+            </div>
+            <button type="button" class="email-btn"><i class="fa-solid fa-envelope fa-bounce" style="color: #fff;"></i> Continue with Email</button>
+            <button type="button" class="google-btn"><i class="fa-brands fa-google fa-bounce"></i> Sign in with Google</button>
+          </form>
+
+          <form id="signupForm" style="display: none;">
+            <input type="text" placeholder="First Name" class="full-name-input">
+            <input type="text" placeholder="Last Name" class="full-name-input">
+            <input type="email" placeholder="Email" class="email-input">
+            <div class="terms-checkbox">
+              <input type="checkbox" id="terms">
+              <label for="terms">I agree to Zomato's <a href="#">Terms of Service</a> <a href="#">Privacy Policy</a> and <a href="#">Content Policies</a></label>
+            </div>
+            <button type="button" class="create-account-btn">Create account</button>
+            <div class="or-section">
+              <hr>
+              <span>or</span>
+              <hr>
+            </div>
+            <button type="button" class="google-btn">Sign in with Google</button>
+          </form>
+          <div class="new-account">
+            <hr>
+            <p>New to Zomato? <a href="#">Create account</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!--------------- Below Navbar ---------->
+    <section>
+     <div class="max-container">  
+        <div class="breadcrumb-nav">
+            <a href="#">Home</a> /
+            <a href="#">India</a> /
+            <a href="#">Kolkata</a> /
+            <a href="#">North Kolkata</a> /
+            <a href="#" style="color:#D0D0D0;">College Street Restaurants</a>
+          </div>
+        </div>  
+    </section>
+
+    <!----------------   Gallery Container ---------------->
+    <section>
+        <div class="gallery-container">
+          <div class="gallery-cont1">
+            <div><img src="Zimages/gallery-1.jpg" alt="food-image"></div>
+          </div>
+          <div class="gallery-cont2">
+            <div><img src="Zimages/gallery-2.jpg" alt="food-image"></div>
+            <div><img src="Zimages/gallery-3.jpg" alt="food-image"></div>
+          </div>
+          <div class="gallery-cont3">
+            <div><img src="Zimages/gallery-4.jpg" alt="food-image"></div>
+          </div>
+        </div>
+    </section>
+
+    <!--------------- Restaurant Name info & menu cards-->
+    <section>
+        <div class="restaurant-info">
+          <div class="info-header">
+            <h1>Arsalan</h1>
+            <p>Biryani, North Indian, Mughlai, Kebab, Rolls, Seafood</p>
+            <p>Park Street Area, Kolkata</p>
+            <p><span style="color: #ff5c5c;">Open now</span> 11am – 4am (Today)</p>
+            <div class="options">
+              <button><i class="fa-solid fa-diamond-turn-right" style="color: #ff5c5c;"></i> Get Directions</button>
+              <button><i class="fa-solid fa-share" style="color: #ff5c5c;"></i> Share</button>
+              <button><i class="fa-regular fa-bookmark" style="color: #ff5c5c;"></i> Bookmark</button>
+            </div>
+          </div>
+          <div class="ratings">
+            <div class="dining-rating">
+              <span>4.4 &#9733</span>
+              <p>Dining</p>
+              <p>33,000 Dining Reviews</p>
+            </div>
+            <div class="delivery-rating">
+              <span>4.2 &#9733</span>
+              <p>Delivery</p>
+              <p>10,000 Delivery Reviews</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="tabs">
+          <ul>
+            <li class="active">Overview</li>
+            <li>Order Online</li>
+            <li>Reviews</li>
+            <li>Photos</li>
+            <li>Menu</li>
+          </ul>
+        </div>
+      
+        <div class="tab-content">
+              <div class="items">
+                <!-- <div class="item">
+                  <div class="image-section">
+                    <img src="Zimages/card-1.jpg" alt="food-image">
+                  </div>
+                  <div class="details-section">
+                    <h3>Biryani</h3>
+                    <div class="rating-price">
+                      <div><img src="Zimages/rating_img.png" height="20px"> <p>158 votes</p></div>
+                      <p>₹200</p>
+                    </div>
+                    <p class="description">Delicious traditional Biryani</p>
+                  </div>
+                  <div class="button-section">
+                    <button id="add-cart-btn">Add to Cart</button>
+                  </div>
+                </div> -->
+              </div>
+        </div>
+   
+    </section>
+  </main>    
+
+  <footer>
+       <!----  Footer top nav   ---->
+        <div class="footer-top">
+          <div class="footer-logo-buttons">
+            <div>
+              <img src="Zimages/zomato-black-logo.png" alt="z-Logo">
+            </div>
+            <div>
+              <button>Download on the App Store</button>
+              <button>Get it on Google Play</button>
+            </div>
+          </div>
+        </div>
+
+        <!--    Footer Bottom    -->
+        <div class="footer-bottom">
+          <div>
+            <h5>About Zomato</h5>
+            <p>Who We Are</p>
+            <p>Blog</p>
+            <p>Work With Us</p>
+            <p>Investor Relations</p>
+            <p>Report Fraud</p>
+            <p>Press Kit</p>
+            <p>Contact Us</p>
+          </div>
+          <div>
+            <h5>Zomaverse</h5>
+            <p>Zomato</p>
+            <p>Blinkit</p>
+            <p>Feeding India</p>
+            <p>Hyperpure</p>
+            <p>Zomato Live</p>
+            <p>Zomaland</p>
+            <p>Weather Union</p>
+          </div>
+          <div>
+            <h5>For Restaurants</h5>
+            <p>Partner With Us</p>
+            <p>Apps For You</p>
+          </div>
+          <div>
+            <h5>Learn More</h5>
+            <p>Privacy</p>
+            <p>Security</p>
+            <p>Terms</p>
+            <p>Sitemap</p>
+          </div>
+  
+          <div class="social-links-box">
+            <h5>Social Links</h5>
+            <div class="social-icon-box">
+              <div><i class="fa-brands fa-linkedin-in"></i></div>
+              <div><i class="fa-brands fa-square-instagram"></i></div>
+              <div><i class="fa-brands fa-x-twitter"></i></div>
+              <div><i class="fa-brands fa-youtube"></i></div>
+              <div><i class="fa-brands fa-facebook-f"></i></div>
+            </div>
+            <div class="playstore-img-box">
+              <div>
+                <img src="Zimages/apple-playstore.jpg" width="100px" alt="Apple Play Store">
+              </div>
+              <div>
+                <img src="Zimages/google-playstore.jpg"  width="100px" alt="Google Play Store">
+              </div>
+            </div>
+          </div>
+        </div> 
+        <p class="footer-para">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.</p> 
+  </footer>
+
+<script src="order.js"></script>  
+<script src="script.js"></script>
+</body>
+</html>
